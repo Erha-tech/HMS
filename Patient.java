@@ -2,44 +2,41 @@ class Patient {
     private String name;
     private int age;
     private String diagnosis;
+    private Hospital hospital;   // ← связь с больницей
 
-    // Конструкторы
-    public Patient() {}
-
-    public Patient(String name, int age, String diagnosis) {
+    public Patient(String name, int age, String diagnosis, Hospital hospital) {
         this.name = name;
         this.age = age;
         this.diagnosis = diagnosis;
+        this.hospital = hospital;
     }
 
-    // Геттеры и сеттеры
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
     }
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getDiagnosis() {
         return diagnosis;
     }
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis;
+    public Hospital getHospital() {
+        return hospital;
     }
 
-    // Метод
+    public void setHospital(Hospital hospital) {
+        this.hospital = hospital;
+    }
+
     public void displayInfo() {
-        System.out.println("Patient: " + name + ", age: " + age + ", diagnosis: " + diagnosis);
+        System.out.println(
+            "Patient: " + name +
+            ", age: " + age +
+            ", diagnosis: " + diagnosis +
+            ", hospital: " + hospital.getName()
+        );
     }
 
-    // Сравнение пациентов по диагнозу
     public boolean hasSameDiagnosis(Patient other) {
         return this.diagnosis.equalsIgnoreCase(other.diagnosis);
     }
