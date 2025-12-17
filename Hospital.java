@@ -2,13 +2,11 @@ class Hospital {
     private String name;
     private String address;
 
-    // Конструктор
     public Hospital(String name, String address) {
         this.name = name;
         this.address = address;
     }
 
-    // Геттеры и сеттеры
     public String getName() {
         return name;
     }
@@ -23,7 +21,6 @@ class Hospital {
         this.address = address;
     }
 
-    // Метод
     public void displayInfo() {
         System.out.println("Hospital: " + name + ", address: " + address);
     }
