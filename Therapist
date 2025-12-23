@@ -1,0 +1,11 @@
+public class Therapist extends Doctors {
+
+    public Therapist(String name, int experience) {
+        super(name, experience);
+    }
+
+    @Override
+    public void examinePatient() {
+        System.out.println("Therapist " + name + " with " + experience + " years of experience checks general health");
+    }
+}
