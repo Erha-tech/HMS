@@ -1,0 +1,11 @@
+public class Surgeon extends Doctors {
+
+    public Surgeon(String name, int experience) {
+        super(name, experience);
+    }
+
+    @Override
+    public void examinePatient() {
+        System.out.println("Surgeon " + name + " with " + experience + " years of experience performs the operation");
+    }
+}
